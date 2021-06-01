@@ -10,6 +10,7 @@ It requires `wg` and `terraform`.
 Python dependencies are managed using `poetry`.
 
 ```
+$ poetry install
 $ poetry run ./main.py init
 $ poetry run ./main.py up -o wg0.conf -t wg0.tmpl
 ```
@@ -23,7 +24,7 @@ and replace `<...>`s:
 {
   "init": {
     "region": "us-east1",
-    "billing_account": "<BILLING_ACCOUNT_ID>",
+    "billing_account": "<BILLING_ACCOUNT_ID>"
   },
   "instance": {
     "source_ranges": [
