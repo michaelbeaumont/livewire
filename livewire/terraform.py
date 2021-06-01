@@ -17,7 +17,6 @@ def run_terraform(subcommand: str, env: dict):
         ["terraform", subcommand, "-auto-approve"],
         env=make_terraform_env(env),
         check=True,
-        stdout=DEVNULL,
     )
 
 
@@ -25,7 +24,7 @@ def run_output() -> bytes:
     return run(["terraform", "output", "-json"], check=True, capture_output=True).stdout
 
 
-WIREFORM = "https://github.com:michaelbeaumont/wireform"
+WIREFORM = "github.com/michaelbeaumont/wireform"
 
 
 def run_init(submodule: str):
